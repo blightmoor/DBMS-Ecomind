@@ -2,39 +2,30 @@
 
 Build sustainability like a product, not a spreadsheet.
 
-EcoMind is a full-stack carbon intelligence platform that helps teams capture emissions data, understand trends, and act on AI-guided recommendations. It combines operational tracking, accountability workflows, and decision support in one place.
+EcoMind is a full-stack carbon intelligence platform for teams that want to track emissions, understand patterns, and take action with confidence.
 
-## Why EcoMind
+## What EcoMind Does
 
-Most carbon tools stop at reporting. EcoMind is built for action:
+- Captures real-world emission records across workflows
+- Turns raw inputs into clear sustainability insights
+- Provides AI-assisted recommendations for practical reductions
+- Preserves traceability with auditable activity logs
 
-- Track real-world emission records across workflows.
-- Turn raw data into understandable dashboards.
-- Add AI-assisted recommendations to reduce impact.
-- Maintain traceability with auditable activity history.
+## Features
 
-## Core Capabilities
+- Role-based authentication and protected routes
+- Emission data entry, storage, and analysis
+- AI Insights and Recommendations modules
+- Audit Logs for accountability and compliance
+- Sustainability dashboards for progress tracking
+- Admin area for organization and user management
 
-- Authentication and role-based access for secure organization use.
-- Emission data entry, storage, and analysis.
-- AI insight and recommendation pages for practical reductions.
-- Audit logs for transparency and compliance trails.
-- Sustainability dashboard views for progress monitoring.
-- Admin space for user and organization management.
+## Tech Stack
 
-## Technology Stack
-
-- Frontend: SvelteKit and Tailwind CSS
+- Frontend: SvelteKit + Tailwind CSS
 - Backend: FastAPI (Python)
 - Database: MySQL
-- AI Layer: Python-driven analytics and recommendation logic
-
-## Quick Tour
-
-- Home page for platform overview and navigation.
-- Emission data page for input and trend tracking.
-- AI insights and recommendations for reduction strategies.
-- Admin and audit modules for governance.
+- AI Layer: Python-based analytics and recommendation logic
 
 ## Screenshots
 
@@ -44,31 +35,44 @@ Most carbon tools stop at reporting. EcoMind is built for action:
 ### Emissions
 ![Emission Page](other/EmissionPage.png)
 
-## Repository Layout
+## Project Structure
 
 ```text
-Raksha/
-|- backend/                     FastAPI services and database logic
+DBMS_EcoMind/
+|- backend/                     FastAPI services and DB scripts
 |  |- main.py                   Backend entry point
 |  |- check_structure.py        Database/schema checks
 |  |- probe_emission_records_sql.py
 |  \- insertValues/             Data insertion scripts
 |- frontend/                    SvelteKit application
-|  |- package.json              Frontend dependencies and scripts
+|  |- package.json
 |  |- src/                      Routes, stores, and UI components
-|  \- static/                   Public static assets
-|- other/                       Images and supporting resources
+|  \- static/
+|- other/                       Images and assets
 \- README.md
 ```
 
-## Getting Started
+## Quick Start
 
-1. Clone the repository.
-2. Configure backend environment values for MySQL access.
-3. Start the FastAPI backend from the backend folder.
-4. Install frontend dependencies in the frontend folder.
-5. Run the SvelteKit development server and open the app in browser.
+1. Clone the repo.
+2. Configure your MySQL connection values for the backend.
+3. Start the backend:
+
+```bash
+cd backend
+uvicorn main:app --reload
+```
+
+4. Start the frontend:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+5. Open the local frontend URL shown in the terminal.
 
 ## Vision
 
-EcoMind aims to make sustainability operations measurable, explainable, and continuous so organizations can move from periodic reporting to everyday climate-aware decisions.
+EcoMind is designed to make sustainability work measurable, explainable, and continuous, so teams can move from periodic reporting to everyday climate-aware decisions.
